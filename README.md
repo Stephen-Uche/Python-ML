@@ -1,35 +1,45 @@
-# Python ML
+# Python ML - Housing EDA
 
-Course material and notebooks for learning core Python data analysis tools, including NumPy, Pandas, and Matplotlib.
+This repository contains a Jupyter Notebook for exploratory data analysis of a housing dataset. The notebook loads `housing.csv`, inspects the data, checks summary statistics, and visualizes selected housing features with Pandas and Matplotlib.
 
 ## Repository Structure
 
 ```text
-NBIHAK PAIVT26D - Kursmaterial/
-├── Data/
-│   └── cars_data.csv
-├── Doc/
-│   ├── ai_heretic_acemoglu.pdf
-│   └── commodification_of_education_AI_monett_paquett.pdf
-├── Matplotlib/
-│   ├── matplotlib.ipynb
-│   └── matplotlib_Terese.ipynb
-├── NumPy/
-│   ├── NumPy.ipynb
-│   └── NumPy_Terese.ipynb
-└── Pandas/
-    ├── Pandas.ipynb
-    ├── Pandas_Terese.ipynb
-    └── README.md
+.
+├── README.md
+└── NBIHAK PAIVT26D - Kursmaterial/
+    ├── eda_housing.ipynb
+    └── housing.csv
 ```
 
-## Contents
+## Files
 
-- `NumPy/` contains notebooks for working with arrays and numerical operations.
-- `Pandas/` contains notebooks for loading, cleaning, filtering, sorting, and grouping tabular data.
-- `Matplotlib/` contains notebooks for plotting and data visualization.
-- `Data/cars_data.csv` is the sample dataset used by the Pandas exercises.
-- `Doc/` contains supporting reading material.
+- `NBIHAK PAIVT26D - Kursmaterial/eda_housing.ipynb` contains the housing exploratory data analysis workflow.
+- `NBIHAK PAIVT26D - Kursmaterial/housing.csv` is the dataset used by the notebook.
+- `README.md` explains the repository and how to run the notebook.
+
+## Dataset
+
+The housing dataset contains 20,640 rows and these columns:
+
+- `longitude`
+- `latitude`
+- `housing_median_age`
+- `total_rooms`
+- `total_bedrooms`
+- `population`
+- `households`
+- `median_income`
+- `median_house_value`
+- `ocean_proximity`
+
+## Requirements
+
+Use Python 3 with these packages:
+
+- `notebook`
+- `pandas`
+- `matplotlib`
 
 ## Getting Started
 
@@ -40,10 +50,10 @@ python3 -m venv .venv
 source .venv/bin/activate
 ```
 
-Install the common notebook dependencies:
+Install the required packages:
 
 ```bash
-pip install notebook numpy pandas matplotlib
+pip install notebook pandas matplotlib
 ```
 
 Start Jupyter Notebook:
@@ -52,10 +62,16 @@ Start Jupyter Notebook:
 jupyter notebook
 ```
 
-Then open one of the `.ipynb` files from `NBIHAK PAIVT26D - Kursmaterial/`.
+Open this notebook:
+
+```text
+NBIHAK PAIVT26D - Kursmaterial/eda_housing.ipynb
+```
+
+Run the notebook cells from top to bottom.
 
 ## Notes
 
-- Run notebook cells in order so imports and variables are available.
-- If a notebook cannot find `cars_data.csv`, update the file path to point to `NBIHAK PAIVT26D - Kursmaterial/Data/cars_data.csv`.
-- The local `.venv/` folder is for your machine only and should not be committed.
+- `housing.csv` should stay in the same folder as `eda_housing.ipynb`.
+- If the dataset is moved, update the notebook's `DATA_FILE` path.
+- The local `.venv/` folder is only for your machine and should not be committed.
